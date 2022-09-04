@@ -1,0 +1,169 @@
+images {
+  image: "/main/Side_Scroll_GAMERIX/ASSESTS/bg.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/main/Side_Scroll_GAMERIX/ASSESTS/earthlike_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/main/Side_Scroll_GAMERIX/ASSESTS/gas_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/main/Side_Scroll_GAMERIX/ASSESTS/ice_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+images {
+  image: "/main/Side_Scroll_GAMERIX/ASSESTS/ring_planet.png"
+  sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+}
+animations {
+  id: "spin"
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_00.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_04.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_05.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_06.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_07.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/spaceship_08.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+animations {
+  id: "star"
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_00.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_01.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_02.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_03.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_04.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_05.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_06.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_07.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_08.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_09.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_10.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_11.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_12.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_13.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_14.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_15.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_16.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_17.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_18.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_19.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_20.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_21.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_22.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  images {
+    image: "/main/Side_Scroll_GAMERIX/ASSESTS/star_23.png"
+    sprite_trim_mode: SPRITE_TRIM_MODE_OFF
+  }
+  playback: PLAYBACK_LOOP_FORWARD
+  fps: 60
+  flip_horizontal: 0
+  flip_vertical: 0
+}
+margin: 0
+extrude_borders: 1
+inner_padding: 0

@@ -1,0 +1,11 @@
+local score = 1
+local speed = -240
+
+function update(self, dt)
+	local p = go.get_position()
+	p.x = p.x + speed * dt
+	if p.x < -32 then
+		go.delete()
+	end
+	go.set_position(p)
+end
