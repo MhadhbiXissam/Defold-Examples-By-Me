@@ -1,0 +1,14 @@
+attribute highp vec3 position;
+
+uniform mediump mat4 mtx_worldview;
+uniform mediump mat4 mtx_proj;
+
+varying highp vec3 var_position;
+
+void main()
+{
+    vec4 p = mtx_worldview * vec4(position.xyz, 1.0);
+    var_position = position.xyz;
+    gl_Position = mtx_proj * p;
+}
+

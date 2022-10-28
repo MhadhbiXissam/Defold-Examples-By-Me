@@ -1,0 +1,70 @@
+local animate = true
+
+local function fill_positions(self, v0, v1, v2, v3)
+
+end
+
+function init(self)
+    --msg.post(".", "acquire_input_focus")
+    --msg.post("@render:", "use_camera_projection")
+    --msg.post("camera", "acquire_camera_focus")
+    self.animate_angle = 0 
+    g = go.get("/go#ggg","xxx")
+    self.t = 0 
+
+    -- rotate the cube
+    go.animate(".", "euler.z", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_INOUTQUAD, 6)
+    go.animate(".", "euler.x", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_INOUTQUAD, 9)
+    go.animate(".", "euler.y", go.PLAYBACK_LOOP_FORWARD, 360, go.EASING_INOUTQUAD, 12)
+    self.res = go.get("#mesh", "vertices")
+    print(self.res)
+    
+    self.buffer = resource.get_buffer(self.res)
+    print(self.buffer)
+    
+    self.positions = buffer.get_stream(self.buffer, "position")
+    print(self.positions)
+
+    -- if the buffer has some data you could change these values here
+    -- self.positions[1] = self.positions[1] + dt
+
+    -- create a new buffer, since the one in the resource doesn't have enough size
+    self.new_buffer = buffer.create(6, {
+        { name = hash("position"),
+         type=buffer.VALUE_TYPE_FLOAT32,
+         count = 3 }
+    })
+
+    -- get the position stream
+    self.positions = buffer.get_stream(self.new_buffer, "position")
+
+    self.v0 = vmath.vector4(-1, -1, 0, 0)
+    self.v1 = vmath.vector4( 1, -1, 0, 0)
+    self.v2 = vmath.vector4( 1,  1, 0, 0)
+    self.v3 = vmath.vector4(-1,  1, 0, 0)
+
+    --fill_positions(self, self.v0, self.v1, self.v2, self.v3)
+
+    resource.set_buffer(self.res, self.new_buffer)
+
+    if animate then
+        self.animate_angle = 0
+    end
+end
+
+function update(self, dt)
+    self.t = self.t + dt -- <2>
+    go.set("/go#ggg", "xxx", vmath.vector4(self.t, 0, 0, 0))
+    go.set("/go#ggg", "tint", vmath.vector4(0, 1, 0, 1))
+    if animate then
+        self.animate_angle = self.animate_angle + dt
+        self.rot_mtx = vmath.matrix4_rotation_z(self.animate_angle)
+        local v0 = self.rot_mtx * self.v0
+        local v1 = self.rot_mtx * self.v1
+        local v2 = self.rot_mtx * self.v2
+        local v3 = self.rot_mtx * self.v3
+
+        fill_positions(self, v0, v1, v2, v3)
+        resource.set_buffer(self.res, self.new_buffer)
+    end
+end

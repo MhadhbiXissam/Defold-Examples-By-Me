@@ -1,0 +1,5 @@
+material: "/main/custom.material"
+vertices: "/main/temp.buffer"
+textures: "/builtins/graphics/particle_blob.png"
+primitive_type: PRIMITIVE_TRIANGLES
+position_stream: "position"
