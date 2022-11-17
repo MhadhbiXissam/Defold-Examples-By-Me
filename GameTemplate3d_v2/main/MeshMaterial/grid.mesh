@@ -1,0 +1,4 @@
+material: "/main/MeshMaterial/mesh.material"
+vertices: "/main/MeshMaterial/grid.buffer"
+textures: "/main/MeshMaterial/seamless-ground-texture.jpg"
+primitive_type: PRIMITIVE_TRIANGLES

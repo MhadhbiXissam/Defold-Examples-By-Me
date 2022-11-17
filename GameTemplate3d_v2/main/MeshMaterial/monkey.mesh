@@ -1,0 +1,4 @@
+material: "/main/MeshMaterial/mesh.material"
+vertices: "/main/MeshMaterial/suzanne.buffer"
+textures: "/main/MeshMaterial/magma.jpg"
+primitive_type: PRIMITIVE_TRIANGLES
