@@ -1,0 +1,6 @@
+material:"/Matrials/BaseTexture.material"
+vertices:"/Objects/Torus/Torus.buffer"
+textures:"/Objects/Torus/Torus.png"
+primitive_type:PRIMITIVE_TRIANGLES
+position_stream:"position"
+normal_stream:"normal"

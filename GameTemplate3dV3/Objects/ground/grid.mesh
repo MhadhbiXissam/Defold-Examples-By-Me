@@ -1,0 +1,6 @@
+material: "/Matrials/BaseTexture.material"
+vertices: "/Objects/ground/grid.buffer"
+textures: "/Objects/ground/seamless-ground-texture.jpg"
+primitive_type: PRIMITIVE_TRIANGLES
+position_stream: "position"
+normal_stream: "normal"
