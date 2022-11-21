@@ -1,0 +1,188 @@
+name: "main"
+instances {
+  id: "camera"
+  prototype: "/Modules/Camera/Camera.go"
+  position {
+    x: 0.0
+    y: 0.0
+    z: 4.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  component_properties {
+    id: "script"
+    properties {
+      id: "orthographic"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "farZ"
+      value: "1000.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "viewDistance"
+      value: "500.0"
+      type: PROPERTY_TYPE_NUMBER
+    }
+    properties {
+      id: "fixedAspectRatio"
+      value: "false"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "fixedWidth"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+    properties {
+      id: "fixedHeight"
+      value: "true"
+      type: PROPERTY_TYPE_BOOLEAN
+    }
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+instances {
+  id: "go"
+  prototype: "/Objects/SkyBox/sky.go"
+  position {
+    x: 3.288
+    y: -15.089
+    z: -2.638
+  }
+  rotation {
+    x: 0.0
+    y: 1.0
+    z: 0.0
+    w: 6.123234E-17
+  }
+  scale3 {
+    x: 600.0
+    y: 600.0
+    z: 600.0
+  }
+}
+scale_along_z: 0
+embedded_instances {
+  id: "ground"
+  data: "components {\n"
+  "  id: \"grid\"\n"
+  "  component: \"/Objects/ground/grid.mesh\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: -3.903
+    z: 0.0
+  }
+  rotation {
+    x: -0.70710677
+    y: 0.0
+    z: 0.0
+    w: 0.70710677
+  }
+  scale3 {
+    x: 600.0
+    y: 600.0
+    z: 90.0
+  }
+}
+embedded_instances {
+  id: "main"
+  data: "components {\n"
+  "  id: \"Main\"\n"
+  "  component: \"/main/Main.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
+embedded_instances {
+  id: "Player"
+  children: "camera"
+  children: "go"
+  data: "components {\n"
+  "  id: \"Player\"\n"
+  "  component: \"/Objects/Player/Player.script\"\n"
+  "  position {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "  }\n"
+  "  rotation {\n"
+  "    x: 0.0\n"
+  "    y: 0.0\n"
+  "    z: 0.0\n"
+  "    w: 1.0\n"
+  "  }\n"
+  "  property_decls {\n"
+  "  }\n"
+  "}\n"
+  ""
+  position {
+    x: 0.0
+    y: 2.0
+    z: 13.572
+  }
+  rotation {
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+  }
+  scale3 {
+    x: 1.0
+    y: 1.0
+    z: 1.0
+  }
+}
