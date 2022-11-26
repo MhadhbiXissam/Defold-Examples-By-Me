@@ -1,0 +1,6 @@
+material:"/Matrials/BaseTexture.material"
+vertices:"/Objects/camo/camo.buffer"
+textures:"/Objects/camo/camo.png"
+primitive_type:PRIMITIVE_TRIANGLES
+position_stream:"position"
+normal_stream:"normal"
