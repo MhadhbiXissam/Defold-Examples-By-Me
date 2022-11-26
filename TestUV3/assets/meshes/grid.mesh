@@ -1,0 +1,4 @@
+material: "/assets/meshes/mesh.material"
+vertices: "/assets/meshes/grid.buffer"
+textures: "/assets/images/checker_256_32.png"
+primitive_type: PRIMITIVE_TRIANGLES

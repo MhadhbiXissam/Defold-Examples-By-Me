@@ -1,0 +1,58 @@
+
+function init(self)
+	msg.post(".", "acquire_input_focus")
+
+	-- position directional light
+	self.light = vmath.vector4(0, 0, 8, 0)
+	go.set("#box", "light", self.light)
+	go.set("#monkey", "light", self.light)
+
+	self.touch_down = false
+
+	local res = go.get("#box", "vertices")
+	local buf = resource.get_buffer(res)
+	self.box_positions = buffer.get_stream(buf, "position")
+
+	self.box_original = {}
+	for i=1,#self.box_positions do
+		self.box_original[i] = self.box_positions[i]
+	end
+	
+	self.time = 0.0
+end
+
+function update(self, dt)
+	self.time = self.time + dt
+	local sinval = math.sin(self.time*3.0)
+
+	self.box_positions[1] = self.box_positions[1] + dt
+
+	local sinvalabs = math.abs(sinval)
+	for i=1,#self.box_positions do
+		self.box_positions[i] = self.box_original[i] * (0.5 + 0.5 * sinvalabs)
+	end
+end
+
+function on_input(self, action_id, action)
+	-- move directional light based on input
+	local w, h = window.get_size()
+	local halfwidth = w * 0.5
+	local halfheight = h * 0.5
+	self.light.x = 2 * ((action.x - halfwidth) / halfwidth)
+	self.light.y = 2 * ((action.y - halfheight) / halfheight)
+	go.set("#box", "light", self.light)
+	go.set("#monkey", "light", self.light)
+	--model.set_constant("#cube", "light", self.light)
+
+	if action_id == hash("touch") then
+		self.touch_down = true
+		if action.released then
+			self.touch_down = false
+		end
+	end
+	
+	if self.touch_down and action_id == nil then
+		go.set(".", "euler.y", go.get(".", "euler.y") + action.dx * 0.5)
+		go.set(".", "euler.x", go.get(".", "euler.x") + action.dy * 0.5)
+	end
+end
